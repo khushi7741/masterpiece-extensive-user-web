@@ -1,4 +1,7 @@
-
+@font-face {
+  font-family: 'Mazaeni';
+  src: url('./Fonts/MazaeniTrialRegular-MVznr.ttf');
+}
 
 body {
   margin: 0;
