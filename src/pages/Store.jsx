@@ -21,10 +21,7 @@ const Store = () => {
       time: "approx.time",
       timelimit: "10 days",
       info: "known for",
-      p1: "blouse",
-      p2: "lahenga",
-      p3: "embroidery",
-      p4: "beeding",
+      outfits: ["blouse", "lahenga", "embroidery", "beeding"],
     },
     {
       img1: "/Images/User/stree2.png",
@@ -40,10 +37,7 @@ const Store = () => {
       time: "approx.time",
       timelimit: "10 days",
       info: "known for",
-      p1: "blouse",
-      p2: "lahenga",
-      p3: "embroidery",
-      p4: "beeding",
+      outfits: ["blouse", "lahenga", "embroidery", "beeding"],
     },
     {
       img1: "/Images/User/stree3.png",
@@ -59,10 +53,7 @@ const Store = () => {
       time: "approx.time",
       timelimit: "10 days",
       info: "known for",
-      p1: "blouse",
-      p2: "lahenga",
-      p3: "embroidery",
-      p4: "beeding",
+      outfits: ["blouse", "lahenga", "embroidery", "beeding"],
     },
     {
       img1: "/Images/User/stree4.png",
@@ -78,10 +69,7 @@ const Store = () => {
       time: "approx.time",
       timelimit: "10 days",
       info: "known for",
-      p1: "blouse",
-      p2: "lahenga",
-      p3: "embroidery",
-      p4: "beeding",
+      outfits: ["blouse", "lahenga", "embroidery", "beeding"],
     },
     {
       img1: "/Images/User/stree5.png",
@@ -97,10 +85,7 @@ const Store = () => {
       time: "approx.time",
       timelimit: "10 days",
       info: "known for",
-      p1: "blouse",
-      p2: "lahenga",
-      p3: "embroidery",
-      p4: "beeding",
+      outfits: ["blouse", "lahenga", "embroidery", "beeding"],
     },
     {
       img1: "/Images/User/stree.png",
@@ -116,18 +101,17 @@ const Store = () => {
       time: "approx.time",
       timelimit: "10 days",
       info: "known for",
-      p1: "blouse",
-      p2: "lahenga",
-      p3: "embroidery",
-      p4: "beeding",
+      outfits: ["blouse", "lahenga", "embroidery", "beeding"],
     },
   ];
   return (
     <div className="container mx-auto p-7">
       <Explore />
       <Search />
-      <div className="flex flex-wrap w-full h-full gap-9 justify-center mb-12">
-        {card.map((i) => <Card item={i}/>)}
+      <div className="flex flex-wrap justify-center w-full h-full mb-12 gap-9">
+        {card.map((i) => (
+          <Card item={i} />
+        ))}
       </div>
       <More />
       <Refer />
