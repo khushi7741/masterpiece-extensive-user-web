@@ -15,6 +15,7 @@ module.exports = {
         "978684":"#978684",
         "EDEDED":"#EDEDED",
         "B7AEAE":"#B7AEAE",
+        "E6D7D7":"#E6D7D7"
       }
     },
     fontFamily: {
