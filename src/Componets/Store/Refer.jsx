@@ -12,7 +12,7 @@ const Refer = () => {
         <div className="flex justify-center items-center absolute top-0 h-full w-full">
           <Link
             to=""
-            className="bg-F6F2EC xl:text-4xl md:text-xl text-sm text-BA570B font-bold px-12 py-2 font-Mazaeni flex justify-center items-center"
+            className="bg-F6F2EC xl:text-4xl md:text-xl text-sm text-brown font-bold px-12 py-2 font-Mazaeni flex justify-center items-center"
           >
             refer & earn points
           </Link>

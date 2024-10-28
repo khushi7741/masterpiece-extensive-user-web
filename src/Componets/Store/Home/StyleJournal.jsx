@@ -2,8 +2,8 @@ import React from 'react'
 
 const StyleJournal = () => {
   return (
-    <div className="text-center mb-10">
-          <h2 className="md:text-5xl text-4xl font-bold text-BA570B font-Mazaeni mb-5">
+    <div className="text-center p-10 flex flex-col gap-4">
+          <h2 className="md:text-5xl text-4xl font-bold text-brown font-Mazaeni">
             style journal
           </h2>
           <p>

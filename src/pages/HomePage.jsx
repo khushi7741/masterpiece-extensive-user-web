@@ -3,11 +3,11 @@ import Card from "../Componets/Store/Card";
 import Style from "../Componets/Store/Home/Style";
 import Refer from "../Componets/Store/Refer";
 import Main from "../Componets/Store/Home/Main";
-import Explore from "../Componets/Store/Explore";
 import Popular from "../Componets/Store/Home/Popular";
 import Real from "../Componets/Store/Home/Real";
 import StyleJournal from "../Componets/Store/Home/StyleJournal";
 import Footer from "../Componets/Store/Footer/Footer";
+import ExploreBy from "../Componets/Store/Home/ExploreBy";
 
 const HomePage = () => {
   const explore = [
@@ -154,17 +154,17 @@ const HomePage = () => {
     <div className="capitalize">
       <Main />
       <div className="md:p-16 p-8 bg-E6C3AD/20 mb-4">
-        <Explore />
+        <ExploreBy />
         <div className="flex flex-wrap justify-center gap-9">
           {explore.map(({ img, code }, i) => (
-            <div key={i}>
-              <img src={img} alt="dress" className="mb-4" />
+            <div key={i} className="flex flex-col gap-3">
+              <img src={img} alt="dress" />
               <p className="text-2xl font-semibold">{code}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="p-8 bg-white mb-4">
+      <div className="p-8 bg-white">
         <Popular />
         <div>
           <div className="flex flex-wrap justify-center w-full h-full mb-12 gap-9">
@@ -173,24 +173,24 @@ const HomePage = () => {
             ))}
           </div>
           <div className="flex justify-center">
-            <button className="text-BA570B font-semibold border border-BA570B rounded-md px-4 py-1 capitalize">
+            <button className="text-brown font-semibold border border-brown rounded-md px-4 py-1 capitalize">
               view all
             </button>
           </div>
         </div>
       </div>
-      <div className="md:p-16 p-8 bg-E6C3AD/20 mb-4">
+      <div className="md:p-16 p-8 bg-E6C3AD/20">
         <Popular />
         <div className="flex flex-wrap justify-center gap-9">
           {popular.map(({ img, code }, i) => (
-            <div key={i}>
-              <img src={img} alt="formal" className="mb-4" />
+            <div key={i} className="flex flex-col gap-4">
+              <img src={img} alt="formal" />
               <p className="text-2xl font-semibold">{code}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="md:p-16 p-8 bg-white mb-4">
+      <div className="md:p-16 p-8 bg-white">
         <Real />
         <div className="flex flex-wrap justify-center gap-9 mb-14">
           {real.map((v, i) => (
@@ -200,7 +200,7 @@ const HomePage = () => {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="text-BA570B font-semibold border border-BA570B rounded-md px-4 py-1 capitalize">
+          <button className="text-brown font-semibold border border-brown rounded-md px-4 py-1 capitalize">
             view all
           </button>
         </div>
@@ -213,7 +213,7 @@ const HomePage = () => {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="text-BA570B font-semibold border border-BA570B rounded-md px-4 py-1 capitalize">
+          <button className="text-brown font-semibold border border-brown rounded-md px-4 py-1 capitalize">
             view all
           </button>
         </div>

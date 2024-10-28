@@ -165,7 +165,7 @@ const Top = () => {
   ];
   return (
     <div className="capitalize font-semibold mb-5">
-      <h1 className="text-center p-2 bg-E6C3AD text-BA570B text-2xl font-Mazaeni">top</h1>
+      <h1 className="text-center p-2 bg-E6C3AD text-brown text-2xl font-Mazaeni">top</h1>
       <div className="bg-EEF6F6 flex flex-wrap lg:justify-end justify-center p-2 gap-6 text-md">
         <div className="flex items-center gap-3">
           <img

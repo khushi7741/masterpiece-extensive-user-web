@@ -37,8 +37,8 @@ const Footer = () => {
   ];
   return (
     <div className="bg-E6D7D7 md:px-16 px-8 py-10">
-      <div className="mt-8 flex flex-col justify-center items-center border-b-2 border-b-BA570B">
-        <div className="flex flex-wrap gap-3 items-center justify-center mb-10">
+      <div className="mt-8 flex flex-col gap-10 justify-center items-center border-b-2 border-b-brown">
+        <div className="flex flex-wrap gap-3 items-center justify-center">
           <img src="/Images/User/logo.png" alt="logo" />
           <h2 className="font-Mazaeni text-4xl text-black/80">masterpiece</h2>
         </div>
