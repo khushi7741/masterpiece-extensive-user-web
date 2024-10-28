@@ -2,10 +2,10 @@ import { IconStarFilled } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ item }) => {
+const Card = ({ item, index }) => {
   return (
-    <div className="h-full capitalize bg-white shadow-md">
-      <img src={item.img1} alt="stree" className="w-full h-full" />
+    <div className="h-full capitalize bg-white shadow-md" key={index}>
+      <img src={item.img1} alt="stree" className="w-full h-60  max-sm:h-48" />
       <div className="w-full p-5">
         <div className="flex flex-wrap justify-between border-b pb-4 gap-2">
           <div className="flex gap-3">
@@ -40,9 +40,7 @@ const Card = ({ item }) => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-lg text-gray-500 2xl:text-xl">
-                  {item.type}
-                </p>
+                <p className="text-lg text-gray-500 2xl:text-xl">{item.type}</p>
                 <p className="text-lg font-normal 2xl:text-2xl">{item.price}</p>
               </div>
             </div>
@@ -55,9 +53,7 @@ const Card = ({ item }) => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <p className="text-lg text-gray-500 2xl:text-xl">
-                  {item.time}
-                </p>
+                <p className="text-lg text-gray-500 2xl:text-xl">{item.time}</p>
                 <p className="text-lg font-normal 2xl:text-2xl">
                   {item.timelimit}
                 </p>
@@ -66,9 +62,7 @@ const Card = ({ item }) => {
           </div>
         </div>
         <div className="my-4 flex flex-col gap-4">
-          <div className="text-lg font-medium 2xl:text-2xl">
-            {item.info}
-          </div>
+          <div className="text-lg font-medium 2xl:text-2xl">{item.info}</div>
           <div className="flex flex-wrap gap-4 text-base font-medium text-brown 2xl:text-lg">
             {item.outfits.map((e, i) => (
               <Link key={i} to="" className="px-3 py-1 rounded-lg bg-brown/10">

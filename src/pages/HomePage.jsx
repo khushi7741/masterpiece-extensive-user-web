@@ -155,7 +155,7 @@ const HomePage = () => {
       <Main />
       <div className="md:p-16 p-8 bg-E6C3AD/20 mb-4">
         <ExploreBy />
-        <div className="flex flex-wrap justify-center gap-9">
+        <div className="flex flex-wrap justify-start gap-9">
           {explore.map(({ img, code }, i) => (
             <div key={i} className="flex flex-col gap-3">
               <img src={img} alt="dress" />
@@ -167,7 +167,7 @@ const HomePage = () => {
       <div className="p-8 bg-white">
         <Popular />
         <div>
-          <div className="flex flex-wrap justify-center w-full h-full mb-12 gap-9">
+          <div className="flex flex-wrap justify-start w-full h-full mb-12 gap-9">
             {card.map((i) => (
               <Card item={i} />
             ))}

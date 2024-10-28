@@ -13,7 +13,7 @@ const Slide = () => {
     "/Images/User/feed/m5.png",
   ];
   return (
-    <div className="flex justify-center w-full gap-5 mb-10">
+    <div className="flex justify-center w-full gap-5 mb-10 flex-wrap">
       {slide.map((v, i) => (
         <img src={v} alt="m3" key={i} />
       ))}

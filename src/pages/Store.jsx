@@ -108,9 +108,9 @@ const Store = () => {
     <div className="container mx-auto p-7">
       <Explore />
       <Search />
-      <div className="flex flex-wrap justify-center w-full h-full mb-12 gap-9">
-        {card.map((i) => (
-          <Card item={i} />
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full h-full mb-12 gap-9">
+        {card.map((i, index) => (
+          <Card item={i} key={index} />
         ))}
       </div>
       <More />
