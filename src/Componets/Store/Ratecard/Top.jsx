@@ -165,13 +165,15 @@ const Top = () => {
   ];
   return (
     <div className="capitalize font-semibold mb-5">
-      <h1 className="text-center p-2 bg-E6C3AD text-brown text-2xl font-Mazaeni">top</h1>
+      <h1 className="text-center p-2 bg-E6C3AD text-brown text-2xl font-Mazaeni">
+        top
+      </h1>
       <div className="bg-EEF6F6 flex flex-wrap lg:justify-end justify-center p-2 gap-6 text-md">
         <div className="flex items-center gap-3">
           <img
             src="/Images/User/stich.png"
             alt="stich"
-            className="h-4 w-5 bg-F6F2EC"
+            className="h-4 w-5 bg-fill"
           />
           <p>- base stitching rate</p>
         </div>
@@ -179,12 +181,12 @@ const Top = () => {
           <img
             src="/Images/User/vector.png"
             alt="stich"
-            className="h-4 w-4 bg-F6F2EC"
+            className="h-4 w-4 bg-fill"
           />
           <p>- approximate time</p>
         </div>
       </div>
-      <div className="bg-F6F2EC">
+      <div className="bg-fill">
         <div className="p-5 grid xl:grid-cols-5 lg:grid-cols-3 md:grid-cols-2 w-full gap-10">
           {top.map(({ img1, img2, img3, topname, price, time }, i) => (
             <div className="grid justify-center" key={i}>

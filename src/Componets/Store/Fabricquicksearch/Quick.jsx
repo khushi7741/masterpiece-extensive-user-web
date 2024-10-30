@@ -33,11 +33,20 @@ const Quick = () => {
         <table className="w-full">
           <thead className="w-full">
             <tr className="bg-A8C2C3">
-              <th colSpan={5} className="px-2 py-5 text-lg">Estimated fabric [in meters]</th>
+              <th colSpan={5} className="px-2 py-5 text-lg">
+                Estimated fabric [in meters]
+              </th>
             </tr>
             <tr className="text-lg">
-              <th rowSpan={2} className="w-1/5 bg-E1E1E1">outfits length</th>
-              <th colSpan={4} className="px-2 py-5 bg-B8AEAD border-b-2 border-978684">body size</th>
+              <th rowSpan={2} className="w-1/5 bg-E1E1E1">
+                outfits length
+              </th>
+              <th
+                colSpan={4}
+                className="px-2 py-5 bg-B8AEAD border-b-2 border-978684"
+              >
+                body size
+              </th>
             </tr>
             <tr className="bg-B8AEAD">
               <th className="px-2 py-5">a</th>
@@ -47,20 +56,13 @@ const Quick = () => {
             </tr>
           </thead>
           <tbody>
-            {quick.map(({
-              length,
-              a,
-              b,
-              c,
-              d,
-            },i
-            ) => (
+            {quick.map(({ length, a, b, c, d }, i) => (
               <tr className="font-semibold" key={i}>
                 <td className="px-2 py-8 text-center bg-EDEDED">{length}</td>
-                <td className="px-2 py-8 text-center bg-F6F2EC">{a}</td>
-                <td className="px-2 py-8 text-center bg-F6F2EC">{b}</td>
-                <td className="px-2 py-8 text-center bg-F6F2EC">{c}</td>
-                <td className="px-2 py-8 text-center bg-F6F2EC">{d}</td>
+                <td className="px-2 py-8 text-center bg-fill">{a}</td>
+                <td className="px-2 py-8 text-center bg-fill">{b}</td>
+                <td className="px-2 py-8 text-center bg-fill">{c}</td>
+                <td className="px-2 py-8 text-center bg-fill">{d}</td>
               </tr>
             ))}
           </tbody>

@@ -4,6 +4,7 @@ import Search from "../Componets/Store/Search";
 import Card from "../Componets/Store/Card";
 import More from "../Componets/Store/More";
 import Refer from "../Componets/Store/Refer";
+import HomePageHeading from "../Componets/Reusable/HomePageHeading";
 
 const Store = () => {
   let card = [
@@ -106,12 +107,13 @@ const Store = () => {
   ];
   return (
     <div className="container mx-auto p-7">
-      <Explore />
+      <HomePageHeading
+        title={"explore stores"}
+        Text="lorem5 fasdfa asfasdfa ssfasdf asdfasd afasdffa asfasdf"
+      />
       <Search />
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-full h-full mb-12 gap-9">
-        {card.map((i, index) => (
-          <Card item={i} key={index} />
-        ))}
+        {" "}
       </div>
       <More />
       <Refer />

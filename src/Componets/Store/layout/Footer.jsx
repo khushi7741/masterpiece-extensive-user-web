@@ -2,6 +2,7 @@ import {
   IconBrandFacebookFilled,
   IconBrandInstagram,
   IconBrandPinterest,
+  IconBrandWhatsapp,
 } from "@tabler/icons-react";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -57,7 +58,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-5 flex xl:flex-row flex-col justify-between font-medium text-black/90 text-nowrap items-center">
-        <div className="flex md:flex-row flex-col gap-6 xl:mb-0 mb-3">
+        <div className="flex md:flex-row flex-col md:gap-6 gap-3 text-center xl:mb-0 mb-3">
           <div className="text-wrap">
             © 2024 masterpiece. all rights reserved.
           </div>
@@ -68,7 +69,7 @@ const Footer = () => {
             Terms of service
           </Link>
         </div>
-        <div className="flex flex-wrap !items-center md:gap-7 gap-4 xl:mb-0 mb-3">
+        <div className="flex flex-wrap justify-center !items-center md:gap-7 gap-4 xl:mb-0 mb-3">
           <div>download app</div>
           <div className="flex flex-wrap !items-center gap-4">
             <SvgPlayStore />
@@ -78,6 +79,7 @@ const Footer = () => {
         <div className="flex gap-7">
           <IconBrandFacebookFilled className="h-8 w-8" />
           <IconBrandInstagram className="h-8 w-8" />
+          <IconBrandWhatsapp className="h-8 w-8" />
           <IconBrandPinterest className="h-8 w-8" />
         </div>
       </div>

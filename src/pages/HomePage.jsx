@@ -1,15 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import HomePageHeading from "../Componets/Reusable/HomePageHeading";
 import Card from "../Componets/Store/Card";
+import Footer from "../Componets/Store/layout/Footer";
+import ExploreBy from "../Componets/Store/Home/ExploreBy";
+import Main from "../Componets/Store/Home/Main";
 import Style from "../Componets/Store/Home/Style";
 import Refer from "../Componets/Store/Refer";
-import Main from "../Componets/Store/Home/Main";
-import Popular from "../Componets/Store/Home/Popular";
-import Real from "../Componets/Store/Home/Real";
-import StyleJournal from "../Componets/Store/Home/StyleJournal";
-import Footer from "../Componets/Store/Footer/Footer";
-import ExploreBy from "../Componets/Store/Home/ExploreBy";
+import Layout from "../Componets/Store/layout/Layout";
 
 const HomePage = () => {
+  const [exploreBy, setExploreBy] = useState("outfit");
   const explore = [
     {
       img: "/Images/User/home/dress.png",
@@ -151,76 +151,82 @@ const HomePage = () => {
     },
   ];
   return (
-    <div className="capitalize">
-      <Main />
-      <div className="md:p-16 p-8 bg-E6C3AD/20 mb-4">
-        <ExploreBy />
-        <div className="flex flex-wrap justify-start gap-9">
-          {explore.map(({ img, code }, i) => (
-            <div key={i} className="flex flex-col gap-3">
-              <img src={img} alt="dress" />
-              <p className="text-2xl font-semibold">{code}</p>
-            </div>
-          ))}
+    <Layout>
+      <div className="capitalize">
+        <Main />
+        <div className="p-8 mb-4 md:p-16 bg-E6C3AD/20">
+          <ExploreBy exploreBy={exploreBy} setExploreBy={setExploreBy} />
+          <div className="flex flex-wrap justify-start gap-9">
+            {explore.map(({ img, code }, i) => (
+              <div key={i} className="flex flex-col gap-3">
+                <img src={img} alt="dress" />
+                <p className="text-2xl font-semibold">{code}</p>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-      <div className="p-8 bg-white">
-        <Popular />
-        <div>
-          <div className="flex flex-wrap justify-start w-full h-full mb-12 gap-9">
-            {card.map((i) => (
-              <Card item={i} />
+        <div className="p-8 bg-white">
+          <HomePageHeading title={"popular stores"} />
+          <div className="">
+            <div className="flex flex-wrap justify-center w-full h-full mb-12 gap-9">
+              {card.map((i, index) => (
+                <Card item={i} index={index} />
+              ))}
+            </div>
+            <div className="flex justify-center">
+              <button className="px-4 py-1 font-semibold capitalize border rounded-md text-brown border-brown">
+                view all
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="p-8 md:p-16 bg-E6C3AD/20">
+          <HomePageHeading title={"trending picks"} />
+          <div className="flex flex-wrap justify-center gap-9">
+            {popular.map(({ img, code }, i) => (
+              <div key={i} className="flex flex-col gap-4">
+                <img src={img} alt="formal" />
+                <p className="text-2xl font-semibold">{code}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="p-8 bg-white md:p-16">
+          <HomePageHeading title={"real creations"} />
+          <div className="flex flex-wrap justify-center gap-9 mb-14">
+            {real.map((v, i) => (
+              <div key={i}>
+                <img src={v} alt="real1" />
+              </div>
             ))}
           </div>
           <div className="flex justify-center">
-            <button className="text-brown font-semibold border border-brown rounded-md px-4 py-1 capitalize">
+            <button className="px-4 py-1 font-semibold capitalize border rounded-md text-brown border-brown">
               view all
             </button>
           </div>
         </div>
+        <div className="p-8 bg-E6C3AD/20">
+          <HomePageHeading
+            title={"style journal"}
+            Text={
+              "it's a sanctuary where trends meet personal flair, offering inspiration and guidance to all who seek to curate their unique fashion narrative."
+            }
+          />
+          <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-start w-full h-full mb-12 gap-9">
+            {style.map((i) => (
+              <Style item={i} />
+            ))}
+          </div>
+          <div className="flex justify-center">
+            <button className="px-4 py-1 font-semibold capitalize border rounded-md text-brown border-brown">
+              view all
+            </button>
+          </div>
+        </div>
+        <Refer />
       </div>
-      <div className="md:p-16 p-8 bg-E6C3AD/20">
-        <Popular />
-        <div className="flex flex-wrap justify-center gap-9">
-          {popular.map(({ img, code }, i) => (
-            <div key={i} className="flex flex-col gap-4">
-              <img src={img} alt="formal" />
-              <p className="text-2xl font-semibold">{code}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className="md:p-16 p-8 bg-white">
-        <Real />
-        <div className="flex flex-wrap justify-center gap-9 mb-14">
-          {real.map((v, i) => (
-            <div key={i}>
-              <img src={v} alt="real1" />
-            </div>
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <button className="text-brown font-semibold border border-brown rounded-md px-4 py-1 capitalize">
-            view all
-          </button>
-        </div>
-      </div>
-      <div className="p-8 bg-E6C3AD/20">
-        <StyleJournal />
-        <div className="flex flex-wrap justify-center w-full h-full mb-12 gap-9">
-          {style.map((i) => (
-            <Style item={i} />
-          ))}
-        </div>
-        <div className="flex justify-center">
-          <button className="text-brown font-semibold border border-brown rounded-md px-4 py-1 capitalize">
-            view all
-          </button>
-        </div>
-      </div>
-      <Refer />
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 
